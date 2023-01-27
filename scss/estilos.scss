@@ -1,0 +1,287 @@
+/*IMPORTS DE PARCIALES*/
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@import "variables" ;
+@import "navbar" ;
+@import "barraycarrito" ;
+@import "footer" ;
+@import "animaciones";
+
+
+/*TODAS*/
+.contenidoPagecart, .contenidoPage, .titulos, .filtros, .contenidoCatalogo{
+    padding-bottom: 5%;
+}
+
+.contenidoPage{
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "centrarbarra centrarbarra"
+    "texto_index imagen_index";
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+    justify-content: center;
+    
+}
+/*PAGINA INDEX*/
+.texto_index{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    grid-area: texto_index;
+    height: 60%;
+    width: 60%;
+    margin-left: 40%;
+}
+.imagen_index{
+    grid-area: imagen_index; 
+}
+.rymimg{
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    min-width: 150px;
+}
+
+/*PAGINA NOSOTROS*/
+.jerryCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    grid-area: imagen_index;
+    margin-bottom: 20px;
+    margin-left: 10%;
+
+    .jerrymamadoimg{
+        border: solid 4px #FEF972;
+        border-radius: 10%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+.nosotrosTexto{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 80%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    text-align: right;
+    margin-left: 20%;
+    padding: 20px;
+    grid-area: texto_index;
+}
+ /* PAGINA CATALOGO*/
+#catalogoD{
+    display: grid;
+    gap: 10px;
+    align-items: flex-start;
+    align-content: space-between;
+
+
+    grid-template-areas: 
+        "filtro galeria galeria galeria galeria"
+        "filtro galeria galeria galeria galeria"; 
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+}
+.titulocatalogo{
+    h1{
+        margin-left: 7px;
+    }
+}
+.contenidoCatalogo{
+    grid-area: galeria;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-right: auto;
+    margin-bottom: 10%;
+    
+    
+}
+.filtros{
+    grid-area: filtro;
+
+    display: block;
+    background-color: $colormorty;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    min-width: 200px;
+    p{
+        color: $colornegro;
+        font-size: $font-h2;
+    }
+    li{
+        font-size: $font-p - 0.4rem;
+    }
+}
+
+.galeria{
+    @include cards(auto,auto);
+    background-color: $colormorty;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 5px;
+
+    p{
+        color: $colornegro;
+        text-align: center;
+    }
+    img{
+        height: 150px;
+        border-radius: 15px;
+    }
+    button{
+        @extend .botonbase;
+        font-size: $font-p;
+        color: $colormorty;
+        border-color: $colornegro;
+        background-color: $sombraazul;
+    }
+}
+
+/*PAGINA MI CARRITO*/
+.titulocart{
+    margin-left: 10%;
+}
+.contenidoPagecart{
+    
+    align-content: center;
+    padding: auto;
+    margin: auto;
+    margin-left: 10%;
+
+    
+}
+.contenedorcarro{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 90%;
+    height: auto;
+    background-color: $colornavresponsive;
+    border-radius: 20px;
+    border: 2px;
+    border-color: $colornegro;
+    justify-content: space-between;
+    
+}
+
+.carrogrande{
+    height: 250px;
+}
+.botonescart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 90%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+/*PAGINA RESGISTRARSE*/
+.registertitle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    grid-area: registertitle;
+    h1{
+        margin-bottom: 7px;
+        margin-left: 5px;
+    }
+    p{
+        margin-left: 7px;
+    }
+}
+
+.formulario-de-registro{
+    
+    background-color: $colorrick;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    align-content: center;
+    grid-area: formulario;
+    
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family;
+    font-size: $font-p;
+    padding: 10px;
+    border-radius: 20px;
+    gap: 3px;
+    legend{
+        margin-left: 10px;
+    }
+    p{
+        color: $colornegro;
+    }
+    input{
+        border-radius: 10px;
+    }
+    select{
+        border-radius: 10px;
+    }
+    
+
+}
+.genero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.registerCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: $colorrick;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-area: registercont;
+}
+
+.registergrid{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-areas: 
+    "centrarbarra centrarbarra"
+    "registertitle registertitle"
+    "formulario registercont";
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5%;
+}
+
+/*IMPORT DE PARCIAL ESPECIAL*/
+@import "responsive" ;

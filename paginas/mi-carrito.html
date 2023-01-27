@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito con tus productos de Rick y Morty.">
+    <meta name="keywords" content="cart, shoppingcard, rick, morty, rick y morty, merchandising">
+
+    <title>MI CARRITO - WOOBA LOOBA DUB DUB STORE</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="../index.html" class="enlace">
+                <img src="../recursos/imagenes/basicos/logotiendacontitulo.png" alt="logo de la tienda" class="logo">
+            </a>
+
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="./nosotros.html">NOSOTROS</a></li>
+                <li><a href="./catalogo.html">CATALOGO</a></li>
+                <li><a class="active" href="./mi-carrito.html">MI CARRITO</a></li>
+                <li><a href="./registrarse.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="centrarbarra">
+            <div class="barra_busqueda">
+                <input type="text" class="input">
+                <div class="material-icons icon">
+                    <a href="./catalogo.html" class="lupa">
+                        <span class="material-icons-outlined">
+                            search
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="iconoCarrito">
+                <a href="./mi-carrito.html">
+                    <img src="../recursos/imagenes/basicos/iconocarrito.png" alt="imagen de carrito" class="fotocarrito">
+                </a>
+            </div>
+        </section>
+        <section class="titulocart">
+            <h1>Mi Carrito</h1>
+        </section>
+        <section class="contenidoPagecart">
+            <div class="contenedorcarro">
+                <div class="galeria">
+                    <div class="foto-de-producto">
+                        <img src="../recursos/imagenes/productos/cargador-morty.jpg" alt="foto de cargador" height="200px">
+                    </div>
+                    <div class="descripcion-de-producto">
+                        <p>Cargador Morty</p>
+                        <button> Quitar del carrito</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="../recursos/imagenes/basicos/cart.png" class="carrogrande" alt="imagen grande del carrito de compras">
+                </div>
+            </div>
+            <div class="botonescart">
+                <a href="./catalogo.html">
+                    <button class="btn"> AÑADIR OTRO PRODUCTO </button>
+                </a>
+                <button class="btn"> IR A PAGAR </button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="pie">
+            <div class="redes">
+                <a href="https://www.facebook.com/">
+                    <img src="../recursos/imagenes/basicos/facebook.png" alt="icono facebook">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="../recursos/imagenes/basicos/instagram.png" alt="icono instagram">
+                </a>
+            </div>
+            <div class="info">
+
+                <p>Desarrollado por la AJD
+                    <br> Asociación de Jerrys Desempleados
+                </p>
+
+                <a href="https://rick-y-morty-espanol.fandom.com/es/wiki/Jerry_Smith">
+                    <img src="../recursos/imagenes/basicos/asociacion-de-jerrys-desempleados.jpg" alt="imagen de jerry trabajador" id="jerry" class="shake__lento">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="preentrega2.js"></script>
+</body>
+
+</html>
